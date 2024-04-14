@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="GameRsp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="div1">
+        <h1 class="heading">Rock Paper Scissor</h1>
+    </div>
+    <div class="div2">
+        <img id="theme" src="theme.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="choice">
+            <h3>Player</h3>
+            <h3>Computer</h3>
+        </div>
+        <div class="logos">
+            <div class="rocklogo">
+                <img src="Scissor.png" class="img1" alt="Scissor">
+            </div>
+            <div class="result">
+                <h4 id="p3"></h4>
+            </div>
+            <div class="paperlogo">
+                <img src="Scissor.png" class="img2" alt="Scissor">
+            </div>
+        </div>
+        
+        <div class="m1">
+            <p class="move">Scissor</p>
+            <p class="comp">Scissor</p>
+        </div>
+    </div>
+    <p class="score"></p>
+    <div class="container2">
+        <div class="incontainer">
+            <div class = divrock>
+                <button onclick="
+                playerMove('Rock')"
+                ><img src="Rock.png" class="rockimg" alt="Rock"> </button>
+            </div>
+
+            <div class="divpaper">
+                <button
+                onclick="
+                playerMove('Paper');
+                "><img src="Paper.png" class="paperimg" alt="Paper"> </button>
+            </div>
+
+            <div class="scissorbutton">
+                <button
+                onclick="
+                playerMove('Scissor');
+                "><img src="Scissor.png" class="scissorimg" alt="Scissor"></button>
+            </div>
+        </div>
+        <div class="resetbutton">
+            <button class="button"
+            onclick="score.Win = 0;
+            score.Loss = 0;
+            score.Tie = 0
+            localStorage.removeItem('score');
+            updateScore();"
+            >Reset score</button>
+        </div>
+   </div>
+   
+
+<p class="score"></p>
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
